@@ -1,11 +1,13 @@
+#+TITLE:	俺のOrg
+#+AUTHOR:	lovesaemi
+#+EMAIL:  modeverv@gmail.com
+#+LANGUAGE:	ja
+#+TEXT:	俺のOrgだ
+#+OPTIONS: num:nil	見出し番号の有無
+#+OPTIONS: toc:t	目次の有無
 #+OPTIONS: \n:t
 #+STARTUP: inlineimages
 #+SETUPFILE: https://fniessen.github.io/org-html-themes/setup/theme-readtheorg.setup
-#+BEGIN_SRC emacs-lisp
-(org-toggle-inline-images)
-#+END_SRC
-
-#+RESULTS:
 
 * 日本語
 [[https://vuesplash.lovesaemi.daemon.asia/storage/8lkx-64-m9Cx.jpeg]]
@@ -37,14 +39,23 @@ CLOCK: [2020-05-20 Wed 00:39]--[2020-05-20 Wed 00:40] =>  0:01
 <2020-05-20 Wed>
 
 * 表
+TABで整形
 #+ATTR_HTML: id="table1" border="2" rules="all" frame="all"
-|----------- |-----|--------|
-| a  | a | a |
-|----------- |-----|--------|
-| a  | a | a |
+|---+---+---|
+| a | a | a |
+|---+---+---|
+| a | a | a |
 
 * リスト
- hoge
+- hoge
+  - ああ
+  - ggg
+- ffff
+
+* チェックリスト
+C-c C-cでオフオンできる
+- [X] ああああ
+- [X] bbbbb
 
 * pre
 
@@ -77,3 +88,11 @@ x & = & \sqrt{\frac{a}{b}}
 [[https://gyazo.lovesaemi.daemon.asia/data/0b7fd68d35d2c7c84242273f9c6eb730.png]]
 
 
+
+* スイッチ
+C-c C-cする
+#+BEGIN_SRC emacs-lisp
+(org-toggle-inline-images)
+#+END_SRC
+
+#+RESULTS:
