@@ -144,3 +144,5 @@
 ;;                                   ;; scratch
 ;;                                   persistent-scratch
 ;;                                   )
+;; org inline image
+(load "~/.emacs.d/elisp/org-inline.el")

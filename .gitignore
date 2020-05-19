@@ -53,3 +53,6 @@ private/
 !private/snippets/README.md
 !private/local/README.md
 /games/
+
+.persistent-scratch
+
