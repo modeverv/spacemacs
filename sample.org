@@ -8,6 +8,8 @@
 #+OPTIONS: \n:t
 #+STARTUP: inlineimages
 #+SETUPFILE: https://fniessen.github.io/org-html-themes/setup/theme-readtheorg.setup
+#+HTML_HEAD: <style>#content {max-width: 100%;}</style>
+
 
 * 日本語
 [[https://vuesplash.lovesaemi.daemon.asia/storage/8lkx-64-m9Cx.jpeg]]
@@ -96,3 +98,30 @@ C-c C-cする
 #+END_SRC
 
 #+RESULTS:
+
+
+* H1?
+** H2?
+*** H3?
+**** H4?
+***** H5?
+****** H6
+
+1. ｇｆだｓｆ
+  : ふが
+  : がっが
+2. sfdsafsafa
+   fasasafsda
+   sfdsafsdaf
+3. safdsfsdaf
+
+
+
+- ｇｆだｓｆ
+  : ふが
+  : がっが
+- sfdsafsafa
+   fasasafsda
+   sfdsafsdaf
+- safdsfsdaf
+ 
