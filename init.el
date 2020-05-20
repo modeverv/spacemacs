@@ -38,7 +38,7 @@
 ;;; spacemacsに乗っからないというか設定方法がわからない
 ;;:;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; font
-(set-face-attribute 'default nil :height 180)
+(set-face-attribute 'default nil :height 120)
 ;; \M-+ で拡大
 (global-set-key [(meta ?+)] (lambda () (interactive) (text-scale-increase 1)))
 ;; \M-- で縮小
@@ -145,4 +145,4 @@
 ;;                                   persistent-scratch
 ;;                                   )
 ;; org inline image
-(load "~/.emacs.d/elisp/org-inline.el")
+;; (load "~/.emacs.d/elisp/org-inline.el")
