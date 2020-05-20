@@ -146,3 +146,52 @@
 ;;                                   )
 ;; org inline image
 (load "~/.emacs.d/elisp/org-inline.el")
+;; org コードを評価するとき尋ねない
+(setq org-confirm-babel-evaluate nil)
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '(
+   (js . t)
+   (ruby . t)
+   (python . t)
+   (sql . t)
+   )
+ )
+;; company
+(require 'company)
+(global-company-mode) ; 全バッファで有効にする
+(setq company-transformers '(company-sort-by-backend-importance)) ;; ソート順
+(setq company-idle-delay 0) ; デフォルトは0.5
+(setq company-minimum-prefix-length 2) ; デフォルトは4
+(setq company-selection-wrap-around t) ; 候補の一番下でさらに下に行こうとすると一番上に戻る
+(setq completion-ignore-case t)
+(setq company-dabbrev-downcase nil)
+(setq company-dabbrev-char-regexp "\\(\\sw\\|\\s_\\|_\\|-\\)")
+(setq company-backends '((company-capf company-dabbrev)
+                         ;;company-bbdb
+                         ;;company-eclim
+                         company-semantic
+                         ;;company-clang
+                         ;;company-xcode
+                         ;;company-cmake
+                         company-files
+                         (company-dabbrev-code company-gtags
+                                               company-etags company-keywords)
+                         ;;company-oddmuse
+                         ))
+(global-set-key (kbd "C-M-i") 'company-complete)
+(define-key company-active-map (kbd "M-n") nil)
+(define-key company-active-map (kbd "M-p") nil)
+(define-key company-active-map (kbd "C-n") 'company-select-next)
+(define-key company-active-map (kbd "C-p") 'company-select-previous)
+(define-key company-active-map (kbd "C-h") nil)
+(define-key company-active-map (kbd "C-n") 'company-select-next) ;; C-n, C-pで補完候補を次/前の候補を選択
+;;(define-key company-active-map (kbd "C-p") 'company-select-previous)
+;;(define-key company-search-map (kbd "C-n") 'company-select-next)
+;;(define-key company-search-map (kbd "C-p") 'company-select-previous)
+;;(define-key company-active-map (kbd "C-s") 'company-filter-candidates) ;; C-sで絞り込む
+;;(define-key company-active-map (kbd "C-i") 'company-complete-selection) ;; TABで候補を設定
+(define-key company-active-map [tab] 'company-complete-selection) ;; TABで候補を設定
+(define-key company-active-map (kbd "C-f") 'company-complete-selection) ;; C-fで候補を設定
+(define-key emacs-lisp-mode-map (kbd "C-M-i") 'company-complete) ;; 各種メジャーモードでも C-M-iで co
+

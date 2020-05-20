@@ -79,7 +79,7 @@ safdsafsadfas
 $\sum_{i=1}^n a_i x_i \ge b$ の時
 
 \begin{eqnarray*}
-x & = & \sqrt{\frac{a}{b}}
+~=~x & = & \sqrt{\frac{a}{b}}
 \end{eqnarray*}
 
 
@@ -90,6 +90,24 @@ x & = & \sqrt{\frac{a}{b}}
 [[https://gyazo.lovesaemi.daemon.asia/data/0b7fd68d35d2c7c84242273f9c6eb730.png]]
 
 
+* コード
+とりまrubyしか使えない模様。
+システムにrubyがない環境ではどうするんやろ
+
+#+BEGIN_SRC ruby
+a = [1,2,3]
+a.each {|e| puts e * e }
+#+END_SRC
+
+#+RESULTS:
+| 1 | 2 | 3 |
+
+#+BEGIN_SRC emacs-lisp
+(print 1)
+#+END_SRC
+
+#+RESULTS:
+: 1
 
 * スイッチ
 C-c C-cする

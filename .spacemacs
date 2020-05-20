@@ -31,6 +31,7 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     php
      html
      windows-scripts
      markdown
@@ -64,6 +65,19 @@ values."
                                       auto-save-buffers-enhanced
                                       ;; scratch
                                       persistent-scratch
+                                      ;; company
+                                      company
+                                      company
+;;  company-ctags
+;;  company-dict
+;;  company-emoji
+  company-fuzzy
+;;  company-go
+;;  company-lua
+;;  company-nginx
+;;  company-shell
+  company-web
+;;  company-php
                                       )
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -341,7 +355,7 @@ you should place your code here."
    ["#0a0814" "#f2241f" "#67b11d" "#b1951d" "#4f97d7" "#a31db1" "#28def0" "#b2b2b2"])
  '(package-selected-packages
    (quote
-    (web-mode tagedit slim-mode scss-mode sass-mode pug-mode helm-css-scss haml-mode emmet-mode powershell mmm-mode markdown-toc markdown-mode gh-md tide typescript-mode flycheck web-beautify tern livid-mode skewer-mode simple-httpd json-mode json-snatcher json-reformat js2-refactor yasnippet multiple-cursors js2-mode js-doc coffee-mode persistent-scratch auto-save-buffers-enhanced spinner evil-visualstar evil-visual-mark-mode evil-tutor evil-surround evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state iedit evil-exchange evil-ediff evil-args evil-anzu anzu evil undo-tree adaptive-wrap ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline smartparens restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint indent-guide hydra lv hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation helm-themes helm-swoop helm-projectile projectile pkg-info epl helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-unimpaired f evil-search-highlight-persist highlight evil-numbers evil-nerd-commenter evil-escape goto-chg eval-sexp-fu elisp-slime-nav dumb-jump dash s diminish define-word column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed aggressive-indent ace-window ace-link ace-jump-helm-line helm avy helm-core popup async))))
+    (company-ycmd ycmd request-deferred company-ycm ycm company-try-hard company-terraform terraform-mode hcl-mode company-tabnine unicode-escape names company-suggest company-statistics company-stan stan-mode company-sourcekit sourcekit company-solidity solidity-mode company-rtags rtags company-restclient restclient know-your-http-well company-reftex company-racer company-quickhelp pos-tip company-qml qml-mode company-prescient prescient company-posframe posframe company-pollen pollen-mode company-plsense company-phpactor phpactor composer php-runtime ac-php-core xcscope company-org-roam org-roam emacsql-sqlite emacsql company-ngram company-lua lua-mode company-lsp lsp-mode ht company-lean lean-mode company-jedi jedi-core python-environment epc ctable concurrent deferred company-inf-ruby inf-ruby company-go go-mode company-glsl glsl-mode company-ghci company-ghc ghc haskell-mode company-fuzzy company-flx company-flow ivy-erlang-complete erlang counsel swiper company-ebdb ebdb company-distel distel-completion-lib company-dict company-dcd ivy flycheck-dmd-dub company-ctags company-coq company-math math-symbol-lists company-cabal company-box dash-functional company-bibtex parsebib company-axiom axiom-environment company-auctex auctex company-arduino arduino-mode company-c-headers company-irony irony company-ansible company-anaconda anaconda-mode pythonic php-extras company company-emoji company-erlang company-nginx company-php company-shell company-web phpunit phpcbf php-auto-yasnippets drupal-mode php-mode ob-go ob-sql-mode ob-ipython web-mode tagedit slim-mode scss-mode sass-mode pug-mode helm-css-scss haml-mode emmet-mode powershell mmm-mode markdown-toc markdown-mode gh-md tide typescript-mode flycheck web-beautify tern livid-mode skewer-mode simple-httpd json-mode json-snatcher json-reformat js2-refactor yasnippet multiple-cursors js2-mode js-doc coffee-mode persistent-scratch auto-save-buffers-enhanced spinner evil-visualstar evil-visual-mark-mode evil-tutor evil-surround evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state iedit evil-exchange evil-ediff evil-args evil-anzu anzu evil undo-tree adaptive-wrap ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline smartparens restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint indent-guide hydra lv hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation helm-themes helm-swoop helm-projectile projectile pkg-info epl helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-unimpaired f evil-search-highlight-persist highlight evil-numbers evil-nerd-commenter evil-escape goto-chg eval-sexp-fu elisp-slime-nav dumb-jump dash s diminish define-word column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed aggressive-indent ace-window ace-link ace-jump-helm-line helm avy helm-core popup async))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
