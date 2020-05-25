@@ -38,7 +38,7 @@
 ;;; spacemacsに乗っからないというか設定方法がわからない
 ;;:;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; font
-(set-face-attribute 'default nil :height 180)
+(set-face-attribute 'default nil :height 160)
 ;; \M-+ で拡大
 (global-set-key [(meta ?+)] (lambda () (interactive) (text-scale-increase 1)))
 ;; \M-- で縮小
@@ -78,7 +78,6 @@
                 (alpha                . 90) ; 透明度
                 ) default-frame-alist) )
 (setq initial-frame-alist default-frame-alist)
-
 ;; フレーム タイトル
 (setq frame-title-format
       '("emacs " emacs-version (buffer-file-name " - %f")))
@@ -194,4 +193,25 @@
 (define-key company-active-map [tab] 'company-complete-selection) ;; TABで候補を設定
 (define-key company-active-map (kbd "C-f") 'company-complete-selection) ;; C-fで候補を設定
 (define-key emacs-lisp-mode-map (kbd "C-M-i") 'company-complete) ;; 各種メジャーモードでも C-M-iで co
+;; color settings
+(set-face-attribute 'company-tooltip nil
+                    :foreground "black" :background "lightgrey")
+(set-face-attribute 'company-tooltip-common nil
+                    :foreground "black" :background "lightgrey")
+(set-face-attribute 'company-tooltip-common-selection nil
+                    :foreground "white" :background "steelblue")
+(set-face-attribute 'company-tooltip-selection nil
+                    :foreground "black" :background "steelblue")
+(set-face-attribute 'company-preview-common nil
+                    :background nil :foreground "lightgrey" :underline t)
+(set-face-attribute 'company-scrollbar-fg nil
+                    :background "grey60")
+(set-face-attribute 'company-scrollbar-bg nil
+                    :background "gray40")
 
+;; 絵文字
+;;(custom-set-variables '(emoji-fontset-check-version nil))
+;;(emoji-fontset-enable "Symbola")
+
+;; scratch
+(setq initial-buffer-choice t)

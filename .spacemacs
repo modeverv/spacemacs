@@ -67,17 +67,16 @@ values."
                                       persistent-scratch
                                       ;; company
                                       company
-                                      company
-;;  company-ctags
-;;  company-dict
-;;  company-emoji
-  company-fuzzy
-;;  company-go
-;;  company-lua
-;;  company-nginx
-;;  company-shell
-  company-web
-;;  company-php
+                                      company-fuzzy
+                                      company-web
+                                      ;;  company-ctags
+                                      ;;  company-dict
+                                      ;;  company-emoji
+                                      ;;  company-go
+                                      ;;  company-lua
+                                      ;;  company-nginx
+                                      ;;  company-shell
+                                      ;;  company-php
                                       )
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
