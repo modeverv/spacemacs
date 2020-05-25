@@ -208,10 +208,8 @@
                     :background "grey60")
 (set-face-attribute 'company-scrollbar-bg nil
                     :background "gray40")
-
-;; 絵文字
-;;(custom-set-variables '(emoji-fontset-check-version nil))
-;;(emoji-fontset-enable "Symbola")
-
-;; scratch
+;; バックスラッシュ
+(setq ns-command-modifier 'meta)
+(setq ns-alternate-modifier 'option)
+;; 起動=scratch
 (setq initial-buffer-choice t)

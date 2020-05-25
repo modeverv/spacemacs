@@ -341,7 +341,12 @@ you should place your code here."
                                             :weight normal
                                             :width normal
                                             :powerline-scale 1.1))
+  ;; 時刻
+  (spaceline-define-segment datetime
+    (shell-command-to-string "echo -n $(date '+%a %d %b %I:%M%p')"))
+  (spaceline-spacemacs-theme 'datetime)
   )
+
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
